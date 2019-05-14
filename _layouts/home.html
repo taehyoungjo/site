@@ -1,9 +1,8 @@
-<img src="{{ site.baseurl }}/assets/img/Beijing.jpg">
+---
+layout: "default"
+---
 
-
-{% for post in site.posts %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
+<img src="{{ site.baseurl }}/assets/img/Beijing.jpg" class="img-fluid">
 
 {% for person in site.data.people %}
     {{ person.name }}, {{ person.occupation }} <br>
