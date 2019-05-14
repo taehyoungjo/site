@@ -1,8 +1,4 @@
-{% for file in site.static_files %}
-    {% if file.image %}
-        <img src="{{ file.path }}" alt="{{ file.name }}">
-    {% endif %}
-{% endfor %}
+<img src="{{ site.baseurl }}/assets/img/Beijing.jpg">
 
 
 {% for post in site.posts %}
