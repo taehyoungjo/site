@@ -1,7 +1,33 @@
----
-layout: "default"
----
-
-<h1 class="mt-5">Welcome to my website!</h1>
-
+<!--
 <img src="{{ site.baseurl }}/assets/img/IMG_8003.JPG" class="img-fluid">
+-->
+
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    <body style="height:100vh; width:100vw; display:table">
+
+        <main role="main" style="vertical-align: middle; display: table-cell;">
+            <div class="container px-5 pb-5">
+                
+                <h3 class="mt-5">Hi!</h3>
+                <h3>I'm Tae Hyoung Jo</h3>
+                <h3>I am a</h3>
+                <h3 style="color: blue;">Student</h3>
+                <h3><a href="{{ site.baseurl }}notes" style="color: aqua;">Writer</a></h3>
+                <h3 style="color: orange;">Reader</h3>
+                <h3 style="color: red;">Developer</h3>
+                <h3 style="color: green;">Investor</h3>
+                <h3>This website is my take on radical transparency</h3>
+                <h3>Learn more about me and my philosophy <span><a href="{{ site.baseurl }}about" style="color: pink">here</a></span></h3>
+
+            </div>
+        </main>
+
+    </body>
+
+    {% include bottom_scripts.html %}
+
+</html>

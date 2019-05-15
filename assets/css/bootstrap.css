@@ -4033,11 +4033,6 @@ input[type="button"].btn-block {
   align-items: center;
 }
 
-/* bug fix: navbar immediately closing */
-.navbar-collapse.collapse.in {
-    display: inline-block;
-}
-
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;

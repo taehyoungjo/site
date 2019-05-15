@@ -1,0 +1,12 @@
+/* bug fix: navbar immediately closing */
+.navbar-collapse.collapse.in {
+    display: inline-block;
+}
+
+h1, h3, a {
+    font-family: 'Merriweather';
+}
+
+p, strong {
+    font-family: 'Montserrat'
+}
