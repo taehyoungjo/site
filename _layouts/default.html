@@ -3,10 +3,10 @@
 
     {% include head.html %}
 
-    <body>
+    <body class="d-flex flex-column h-100" style="padding-top: 70px;">
         {% include header.html %}
 
-        <main>
+        <main role="main" class="flex-shrink-0 mb-5">
             <div class="container">
                 {{ content }}
             </div>
