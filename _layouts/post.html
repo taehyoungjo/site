@@ -12,7 +12,7 @@ layout: "default"
 <h3>{{ page.date | date_to_string }}</h3>
 
 {% for cat in page.categories %}
-<a href="{{ site.baseurl }}/notes/{{ cat }}/" class="mt-3 btn btn-outline-success" role="button">{{ cat | replace: "_", " "}}</a>
+<a href="{{ site.baseurl }}/notes/{{ cat }}" class="mt-3 btn btn-outline-success" role="button">{{ cat | replace: "_", " "}}</a>
 {% endfor %}
 
 {% for tag in page.tags %}
