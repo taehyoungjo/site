@@ -4,15 +4,12 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Welcome to my site! 
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+I’m Tae Hyoung Jo.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+I’m a Seoul born, Virginia raised, proud California resident that splits his time between asking big questions, building cool things, and enjoying college life with my friends!
 
+Right now, I am a rising sophomore at Yale passionately curious about technologies, economies, and the people that drive them.
 
-[jekyll-organization]: https://github.com/jekyll
+You can find the source code for this website [here](https://github.com/taehyoungjo/site)

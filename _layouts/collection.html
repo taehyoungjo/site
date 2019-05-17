@@ -1,0 +1,28 @@
+---
+layout: "default"
+---
+
+<strong class="mb-2 text-primary">Collection</strong>
+<h1>{{ page.title | replace: "-", " " }}</h1>
+
+{{ content }}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="pb-4 mb-4 font-italic border-bottom">
+           Notes
+        </h3>
+
+        <ul class="post-list">
+
+            {% for post in site.categories.[page.title] %}
+                <li>
+                    <span>{{ post.date | date_to_string }}</span>
+                    <h3>
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                    </h3>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>
