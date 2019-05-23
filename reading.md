@@ -1,0 +1,4 @@
+---
+layout: reading
+permalink: /reading/
+---
