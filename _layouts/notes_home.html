@@ -1,69 +1,54 @@
-<!DOCTYPE html>
-<html>
+---
+layout: "default"
+---
 
-    {% include head.html %}
+{% for post in site.posts %}
+{% if post.title == page.featured %}
+    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+            <strong class="d-inline-block mb-2">Featured Post</strong>
+            <h1 class="display-4 font-italic">{{ post.title }}</h1>
+            <div class="mb-1">{{ post.date | date_to_string }}</div>
+            <p class="lead my-3">{{ post.excerpt }}</p>
+            <a class="text-white lead stretched-link" href="{{ site.baseurl }}{{ post.url }}">Continue reading</a>
+        </div>
+    </div>
+{% endif %}
+{% endfor %}
 
-    <body class="d-flex flex-column h-100" style="padding-top: 70px;">
-
-        {% include header.html %}
-
-        <main class="mb-5">
-            <div class="container">
-                {% for post in site.posts %}
-                {% if post.title == page.featured %}
-                    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-                        <div class="col-md-6 px-0">
-                            <strong class="d-inline-block mb-2">Featured Post</strong>
-                            <h1 class="display-4 font-italic">{{ post.title }}</h1>
-                            <div class="mb-1">{{ post.date | date_to_string }}</div>
-                            <p class="lead my-3">{{ post.excerpt }}</p>
-                            <a class="text-white lead stretched-link" href="{{ site.baseurl }}{{ post.url }}">Continue reading</a>
-                        </div>
-                    </div>
-                {% endif %}
-                {% endfor %}
-
-                <div class="row mb-2">
-                    {% for collection in site.notes_collections %}
-                        <div class="col-md-6">
-                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                            <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-primary">Collection</strong>
-                            <h3 class="mb-1">{{ collection.title | replace: "-", " " }}</h3>
-                            <p class="card-text">{{ collection.excerpt }}</p>
-                            <a href="{{ site.baseurl }}/notes/{{ collection.title }}" class="stretched-link">Continue reading</a>
-                            </div>
-                            <div class="col-auto d-none d-lg-block">
-                            </div>
-                        </div>
-                        </div>
-                    {% endfor %}
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <h3 class="pb-4 mb-4 font-italic border-bottom">
-                            Notes
-                        </h3>
-
-                        <ul class="post-list">
-                            {% for post in site.posts %}
-                                <li>
-                                    <span>{{ post.date | date_to_string }}</span>
-                                    <h3>
-                                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-                                    </h3>
-                            {% endfor %}
-                        </ul>
-
-                    </div>
-                </div>
+<div class="row mb-2">
+    {% for collection in site.notes_collections %}
+        <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Collection</strong>
+            <h3 class="mb-1">{{ collection.title | replace: "-", " " }}</h3>
+            <p class="card-text">{{ collection.excerpt }}</p>
+            <a href="{{ site.baseurl }}/notes/{{ collection.title }}" class="stretched-link">Continue reading</a>
             </div>
-        </main>
+            <div class="col-auto d-none d-lg-block">
+            </div>
+        </div>
+        </div>
+    {% endfor %}
 
-        {% include footer.html %}
+</div>
 
-    </body>
-    {% include bottom_scripts.html %}
-</html>
+<div class="row">
+    <div class="col-md-12">
+        <h3 class="pb-4 mb-4 font-italic border-bottom">
+            Notes
+        </h3>
+
+        <ul class="post-list">
+            {% for post in site.posts %}
+                <li>
+                    <span>{{ post.date | date_to_string }}</span>
+                    <h3>
+                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                    </h3>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>

@@ -1,0 +1,4 @@
+---
+layout: student
+permalink: /student/
+---

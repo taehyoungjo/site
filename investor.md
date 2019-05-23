@@ -1,0 +1,4 @@
+---
+layout: investor
+permalink: /investor/
+---
