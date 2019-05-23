@@ -4,31 +4,31 @@ layout: "default"
 
 {% for post in site.posts %}
 {% if post.title == page.featured %}
+    <a style="color: white;" href="{{ site.baseurl }}{{ post.url }}">
     <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
             <strong class="d-inline-block mb-2">Featured Post</strong>
             <h1 class="display-4 font-italic">{{ post.title }}</h1>
-            <div class="mb-1">{{ post.date | date_to_string }}</div>
-            <p class="lead my-3">{{ post.excerpt }}</p>
-            <a class="text-white lead stretched-link" href="{{ site.baseurl }}{{ post.url }}">Continue reading</a>
+            <div class="mb-3">{{ post.date | date_to_string }}</div>
+            {{ post.excerpt }}
         </div>
     </div>
+    </a>
 {% endif %}
 {% endfor %}
 
 <div class="row mb-2">
     {% for collection in site.notes_collections %}
         <div class="col-md-6">
-        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">Collection</strong>
-            <h3 class="mb-1">{{ collection.title | replace: "-", " " }}</h3>
-            <p class="card-text">{{ collection.excerpt }}</p>
-            <a href="{{ site.baseurl }}/notes/{{ collection.title }}" class="stretched-link">Continue reading</a>
+            <a class="featured" style="color: black;" href="{{ site.baseurl }}/notes/{{ collection.title }}">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Collection</strong>
+                    <h3 class="mb-3">{{ collection.title | replace: "-", " " }}</h3>
+                    {{ collection.excerpt }}
+                </div>
             </div>
-            <div class="col-auto d-none d-lg-block">
-            </div>
-        </div>
+            </a>
         </div>
     {% endfor %}
 

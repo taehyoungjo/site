@@ -3,12 +3,18 @@
     display: inline-block;
 }
 
-
 p, strong, button, a {
     font-family: 'Montserrat'
 }
 
-
 h1, h3, h3 a {
     font-family: 'Merriweather';
+}
+
+.featured {
+    transition: all 0.3s ease;
+}
+
+.featured:hover {
+    color: blue;
 }
