@@ -36,6 +36,11 @@ defaults:
     values:
       image: true
 
+collections:
+  notes_collections:
+    output: true
+    permalink: /notes/:path/
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

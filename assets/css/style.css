@@ -3,10 +3,12 @@
     display: inline-block;
 }
 
-h1, h3, a {
-    font-family: 'Merriweather';
+
+p, strong, button, a {
+    font-family: 'Montserrat'
 }
 
-p, strong {
-    font-family: 'Montserrat'
+
+h1, h3, h3 a {
+    font-family: 'Merriweather';
 }
