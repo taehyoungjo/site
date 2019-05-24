@@ -45,7 +45,7 @@ layout: "default"
                 <li>
                     <span>{{ post.date | date_to_string }}</span>
                     <h3>
-                        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                        <a class="link_to_post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
                     </h3>
             {% endfor %}
         </ul>
