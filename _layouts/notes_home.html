@@ -4,8 +4,8 @@ layout: "default"
 
 {% for post in site.posts %}
 {% if post.title == page.featured %}
-    <a style="color: white;" href="{{ site.baseurl }}{{ post.url }}">
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <a class="card pb-0 mb-4" href="{{ site.baseurl }}{{ post.url }}">
+    <div id="jumbo" class="jumbotron p-4 p-md-5 mb-0 rounded">
         <div class="col-md-6 px-0">
             <strong class="d-inline-block mb-2">Featured Post</strong>
             <h1 class="display-4 font-italic">{{ post.title }}</h1>
@@ -20,8 +20,8 @@ layout: "default"
 <div class="row mb-2">
     {% for collection in site.notes_collections %}
         <div class="col-md-6">
-            <a class="featured" style="color: black;" href="{{ site.baseurl }}/notes/{{ collection.title }}">
-            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <a class="card featured mb-4 shadow-sm" style="color: black;" href="{{ site.baseurl }}/notes/{{ collection.title }}">
+            <div class="row no-gutters rounded overflow-hidden flex-md-row h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
                     <strong class="d-inline-block mb-2 text-primary">Collection</strong>
                     <h3 class="mb-3">{{ collection.title | replace: "-", " " }}</h3>
