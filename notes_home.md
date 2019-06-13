@@ -1,5 +1,5 @@
 ---
 layout: notes_home
 permalink: /notes/
-featured: "Welcome to Jekyll"
+featured: "A Lean Blog"
 ---
