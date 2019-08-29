@@ -4038,8 +4038,8 @@ input[type="button"].btn-block {
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
+/*  border: 1px solid transparent;
+  border-radius: 0.25rem; */
 }
 
 .navbar-toggler:hover, .navbar-toggler:focus {
@@ -4300,8 +4300,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-toggler {
-  color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 1);
 }
 
 .navbar-light .navbar-toggler-icon {

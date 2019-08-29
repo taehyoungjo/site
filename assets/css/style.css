@@ -84,6 +84,10 @@ h3 a:hover::after{
   transform: translate3d(0, 0, 0);
 }
 
+main {
+    margin-top:36px;
+}
+
 .footer-icon {
     transition: all 0.3s ease 0s;
 }

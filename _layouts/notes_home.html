@@ -2,6 +2,10 @@
 layout: "default"
 ---
 
+<strong class="mb-2 text-primary">Notes</strong>
+<h1>What I'm Thinking</h1>
+
+<!--
 {% for post in site.posts %}
 {% if post.title == page.featured %}
     <a class="card pb-0 mb-4" href="{{ site.baseurl }}{{ post.url }}">
@@ -16,7 +20,56 @@ layout: "default"
     </a>
 {% endif %}
 {% endfor %}
+-->
 
+
+<!--
+<div class="row">
+    <div class="col-md-12">
+        
+        <h3 class="pb-4 mb-4 font-italic border-bottom">
+            Notes
+        </h3>
+        
+
+        
+        <ul class="post-list">
+                {% for post in site.posts %}
+                    <li>
+                        <span>{{ post.date | date_to_string }}</span>
+                        <h3>
+                            <a class="link_to_post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                        </h3>
+                    </li>
+                {% endfor %}
+            </ul>
+    
+        </div>
+    </div>
+-->
+
+
+<div class="row">
+    <div class="col-md-12">
+            {% for post in site.posts %}
+                
+                    <dt><span>{{ post.date | date_to_string }}</span></dt>
+                    <dd>
+                        <h3>
+                            <a class="link_to_post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                        </h3>
+                    </dd>
+                
+            {% endfor %}
+
+    </div>
+</div>
+
+{% for collection in site.notes_collections %}
+<a href="{{ site.baseurl }}/notes/{{ collection.title }}" class="mt-3 btn btn-outline-success" role="button">{{ collection.title | replace: "-", " " }}</a>
+{% endfor %}
+
+<!--
 <div class="row mb-2">
     {% for collection in site.notes_collections %}
         <div class="col-md-6">
@@ -33,22 +86,5 @@ layout: "default"
     {% endfor %}
 
 </div>
+-->
 
-<div class="row">
-    <div class="col-md-12">
-        <h3 class="pb-4 mb-4 font-italic border-bottom">
-            Notes
-        </h3>
-
-        <ul class="post-list">
-            {% for post in site.posts %}
-                <li>
-                    <span>{{ post.date | date_to_string }}</span>
-                    <h3>
-                        <a class="link_to_post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-                    </h3>
-            {% endfor %}
-        </ul>
-
-    </div>
-</div>

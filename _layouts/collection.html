@@ -9,20 +9,20 @@ layout: "default"
 
 <div class="row">
     <div class="col-md-12">
+        <!--
         <h3 class="pb-4 mb-4 font-italic border-bottom">
            Notes
         </h3>
-
-        <ul class="post-list">
+        -->
 
             {% for post in site.categories.[page.title] %}
-                <li>
-                    <span>{{ post.date | date_to_string }}</span>
+                <dt><span>{{ post.date | date_to_string }}</span></dt>
+                    <dd>
                     <h3>
-                        <a class="link_to_post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+                        <a class="link_to_post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                     </h3>
+                    </dd>
             {% endfor %}
-        </ul>
 
     </div>
 </div>
